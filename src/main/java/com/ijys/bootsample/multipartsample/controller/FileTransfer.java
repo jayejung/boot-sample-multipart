@@ -1,6 +1,6 @@
 package com.ijys.bootsample.multipartsample.controller;
 
-import com.ijys.bootsample.multipartsample.service.FileManagerImpl;
+import com.ijys.bootsample.multipartsample.service.FileManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +17,7 @@ import java.util.Map;
 @RequestMapping("/file")
 public class FileTransfer {
 	@Autowired
-	FileManagerImpl fileManager;
+	FileManager fileManager;
 
 	@PostMapping("/upload")
 	public ResponseEntity<?> upload(@RequestParam("testfile")MultipartFile file) {
